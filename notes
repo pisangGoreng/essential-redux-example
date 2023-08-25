@@ -1,0 +1,16 @@
+
+
+- sample thunk middleware with RTK
+
+
+- "counter/fetchCount" => format penulisan, nama reducer / nama functions API
+  export const incrementAsync = createAsyncThunk(
+    "counter/fetchCount",  
+    async (amount) => {
+      const response = await fetchCount();
+      return response.data;
+    }
+  );
+
+- nanti tinggal langsung dipakai di extraReducer, tapi perlu buat masing2 status nya.
+  loading, fulfilled, error, dll
